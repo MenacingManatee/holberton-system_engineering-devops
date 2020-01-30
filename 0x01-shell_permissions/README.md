@@ -1,4 +1,5 @@
-**0x01 Permissions, users, and ownership**
+**0x01 Permissions, users, and ownership**\n
+
 0. Script changed UID to betty. Password still required to finalize change
 1. Prints current user to terminal
 2. Prints all groups current user is part of
