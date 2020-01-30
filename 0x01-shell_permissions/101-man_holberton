@@ -1,17 +1,15 @@
-.\"Manpage for holberton.
-.\" Contact at brett.p.davis101@gmail.com for errors
 .TH man 2 "30 January 2020" "0.32" "holberton man page"
 .SH NAME
-holberton \- become a full-stack software engineer
+.BR holberton \- become a full-stack software engineer
 .SH SYNOPSIS
-holberton [STUDENTNAME]
+.BR holberton [STUDENTNAME]
 .SH DESCRIPTION
-Holberton School is a project-based alternative to college for the next generation of software engineers.
+.BR Holberton School is a project-based alternative to college for the next generation of software engineers.
 .SH OPTIONS
-holberton does not take any options, however you can supply studentname.
+.BR holberton does not take any options, however you can supply studentname.
 .SH SEE ALSO
 .I peerlearning(2), projectbased(2), tullatach(2), Betty(1)
 .SH BUGS
-No known bugs
+.BR No known bugs
 .SH AUTHOR
-Julien Barbier, Sylvain Kalache, Sophie Barbier, Guillaume Salva, Kris Bredemeier, Julien Cyr, Alex Gautier and all the Holberton mentors
+.BR Julien Barbier, Sylvain Kalache, Sophie Barbier, Guillaume Salva, Kris Bredemeier, Julien Cyr, Alex Gautier and all the Holberton mentors
