@@ -1,2 +1,2 @@
 #!/bin/bash
-USER=$(stat -c 'U' ./hello)if $USER==guillaume; then chown betty hello; fi
+USER=$(stat -c %U ./hello); if [ $USER==guillaume ]; then sudo chown betty hello; fi
