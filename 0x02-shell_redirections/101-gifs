@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -R | find *.gif -type f
+basenam -a $(find *.gif -type f)
