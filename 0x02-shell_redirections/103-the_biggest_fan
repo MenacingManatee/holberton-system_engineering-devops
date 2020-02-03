@@ -1,2 +1,2 @@
 #!/bin/bash
-sort nasa_19950801.tsv | uniq -cdf 4 | sort -nr | head -n 11
+sort | uniq -cdf 4 | sort -nr | head -n 11
