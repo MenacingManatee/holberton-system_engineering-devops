@@ -1,0 +1,3 @@
+#!/bin/bash
+WATER="$(echo $WATER | tr "water" "01234")" STIR="$(echo $STIR | tr "stir." "01234")" WATER="$((5#$WATER))" STIR="$((5#$STIR))" BEHLNORT="$(expr $(($WATER + $STIR)))" 
+printf "%o\n" $BEHLNORT | tr "01234567" "behlnort"
