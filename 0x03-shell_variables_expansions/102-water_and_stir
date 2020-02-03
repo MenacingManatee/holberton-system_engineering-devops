@@ -1,2 +1,2 @@
 #!/bin/bash
-WATER="$(echo $WATER | tr "water" "01234")" STIR="$(echo $STIR | tr "stir." "01234")" WATER="$((5#$WATER))" STIR="$((5#$STIR))"; printf "%o\n" $(($WATER + $STIR)) | tr "01234567" "behlnort"
+WATER="$(echo $WATER | tr "water" "01234")" STIR="$(echo $STIR | tr "stir." "01234")" WATER="$((5#$WATER))" STIR="$((5#$STIR))" 'printf' "%o\n" $(($WATER + $STIR)) | tr "01234567" "behlnort"
