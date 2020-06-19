@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# prints each username, uid, and home dir in /etc/passwd
+while read -r line; do
+    echo "$line" | cut -f 1,3,6 -d ':'
+done < /etc/passwd
