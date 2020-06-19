@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Loops 10 times, printing a string
 for i in {1..10};
 do
     if [ $i != 11 ]
