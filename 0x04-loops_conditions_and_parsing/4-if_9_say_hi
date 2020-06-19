@@ -1,2 +1,12 @@
 #!/usr/bin/env bash
-
+# Loops 10 times, printing 'Hi' on 9th iteration
+i=0
+while [ $i -lt 10 ]; do
+    if [ $i == 8 ]
+	then
+	echo "Hi"
+    else
+	echo "Holberton School"
+    fi
+    let i=i+1
+done
