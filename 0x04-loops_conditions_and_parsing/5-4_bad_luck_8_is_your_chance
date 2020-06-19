@@ -1,2 +1,15 @@
 #!/usr/bin/env bash
-
+# Loops 10 times, printing good luck on 8 and bad luck on 4
+i=0
+while [ $i -lt 10 ]; do
+    if [ $i == 3 ]
+	then
+	echo "bad luck"
+    elif [ $i == 7 ]
+	then
+	echo "good luck"
+    else
+	echo "Holberton School"
+    fi
+    let i=i+1
+done
