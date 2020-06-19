@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Displays content of the current directory, only displaying names after
 # the first dash
-for item in $( ls ); do
-    echo $item | cut -f 2- -d '-'
+for item in *; do
+    echo "$item" | cut -f 2- -d '-'
 done
