@@ -1,2 +1,22 @@
 #!/usr/bin/env bash
-
+# Loops 1-100. Prints 'Fizz' on multiples of 3 and 'Buzz' on multiple of 5
+i=1
+while [ $i -lt 101 ]; do
+    let j=$i%3
+    let k=$i%5
+    if [ $j -eq 0 ] || [ $k -eq 0 ]
+	then
+	if [ $j -eq 0 ] && [ $k -eq 0 ]
+	    then
+	    echo "FizzBuzz"
+	elif [ $j -eq 0 ]
+	    then
+	    echo "Fizz"
+	else
+	    echo "Buzz"
+	fi
+    else
+	echo "$i"
+    fi
+    let i=i+1
+done
