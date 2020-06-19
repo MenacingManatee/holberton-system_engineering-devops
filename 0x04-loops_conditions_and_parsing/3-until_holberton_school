@@ -1,2 +1,7 @@
 #!/usr/bin/env bash
-
+# Same as previous task, but using until loop
+i=10
+until [ $i -lt 1 ]; do
+    echo "Holberton School"
+    let i=i-1
+done
