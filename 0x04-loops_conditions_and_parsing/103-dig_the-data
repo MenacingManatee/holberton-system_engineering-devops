@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-
+# Uses awk to parse the apache access log, then sorts it by IP and HTTP
+# status code
+awk '{print $1,$9}' apache-access.log | sort | uniq -c | sort -nr
