@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # displays To infinity and beyond indefinitely.
-while [ 1 ]; do
+const=1
+while [ $const ]; do
     echo "To infinity and beyond"
     sleep 2
 done
