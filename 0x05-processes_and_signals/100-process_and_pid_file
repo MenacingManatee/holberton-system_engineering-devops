@@ -5,7 +5,8 @@ trap sigtrap SIGTERM
 trap inttrap SIGINT
 trap cleaner EXIT
 const=1
-sudo echo "$$" > /var/run/holbertonscript.pid
+sudo touch /var/run/holbertonscript.pid
+echo "$$" | sudo tee /var/run/holbertonscript.pid 1> /dev/null
 function looop()
 {
     while [ $const ]; do
@@ -16,13 +17,11 @@ function looop()
 function sigtrap()
 {
     echo "I hate the kill command"
-    trap sigtrap SIGTERM
-    looop
+    exit
 }
 function inttrap()
 {
     echo "Y U no love me?!"
-    trap inttrap SIGINT
     looop
 }
 function cleaner()
