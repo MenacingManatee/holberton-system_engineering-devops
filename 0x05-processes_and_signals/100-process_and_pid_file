@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+# displays To infinity and beyond indefinitely.
+# Displays I am invincible!!! on receiving SIGTERM
+trap sigtrap SIGTERM
+trap inttrap SIGINT
+trap cleaner EXIT
+const=1
+echo "$$" >> /var/run/holbertonscript.pid
+function looop()
+{
+    while [ $const ]; do
+	echo "To infinity and beyond"
+	sleep 2
+    done
+}
+function sigtrap()
+{
+    echo "I hate the kill command"
+    trap sigtrap SIGTERM
+    looop
+}
+function inttrap()
+{
+    echo "Y U no love me?!"
+    trap inttrap SIGINT
+    looop
+}
+function cleaner()
+{
+    rm /var/run/holbertonscript.pid
+    exit
+}
+looop
