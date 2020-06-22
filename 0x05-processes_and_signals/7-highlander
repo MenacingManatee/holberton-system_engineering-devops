@@ -1,2 +1,18 @@
 #!/usr/bin/env bash
-
+# displays To infinity and beyond indefinitely.
+# Displays I am invincible!!! on receiving SIGTERM
+trap sigtrap SIGTERM
+const=1
+function looop()
+{
+    while [ $const ]; do
+	echo "To infinity and beyond"
+	sleep 2
+    done
+}
+function sigtrap()
+{
+    echo "I am invincible!!!"
+    looop
+}
+looop
