@@ -5,7 +5,7 @@ trap sigtrap SIGTERM
 trap inttrap SIGINT
 trap cleaner EXIT
 const=1
-echo "$$" >> /var/run/holbertonscript.pid
+sudo echo "$$" > /var/run/holbertonscript.pid
 function looop()
 {
     while [ $const ]; do
@@ -27,7 +27,7 @@ function inttrap()
 }
 function cleaner()
 {
-    rm /var/run/holbertonscript.pid
+    sudo rm /var/run/holbertonscript.pid
     exit
 }
 looop
