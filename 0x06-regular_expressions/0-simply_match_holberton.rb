@@ -1,2 +1,2 @@
 #!/usr/bin/env ruby
-puts /Holberton/.match(ARGV[0])
+puts (ARGV.join()).scan(/Holberton/).join()
