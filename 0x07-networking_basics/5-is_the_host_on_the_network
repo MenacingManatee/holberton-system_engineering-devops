@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# Pings the ip sent in to argv[1]
 ping "$1"
