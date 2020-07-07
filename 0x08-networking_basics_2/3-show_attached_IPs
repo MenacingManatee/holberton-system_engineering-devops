@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-
+# Displays all active IPv4 IPs on this machine
+ip -o -4 addr | cut -f 7 -d ' '
