@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-
+# Reconfigures loacalhost to 127.0.0.2 and facebook to 8.8.8.8
+echo $'\n127.0.0.1 facebook.com\n197.168.1.10 tmp' | sudo tee -a /etc/hosts
