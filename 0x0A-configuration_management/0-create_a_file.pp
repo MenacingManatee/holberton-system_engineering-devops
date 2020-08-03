@@ -1,3 +1,4 @@
+# Creates a file with specified path and permissions
 file { '/tmp/holberton':
   path    => '/tmp/holberton',
   content => 'I love Puppet',
