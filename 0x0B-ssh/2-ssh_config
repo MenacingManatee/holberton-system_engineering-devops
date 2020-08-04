@@ -1,0 +1,5 @@
+Host 34.73.196.89
+     User ubuntu
+     IdentityFile ~/.ssh/holberton
+     BatchMode yes
+
