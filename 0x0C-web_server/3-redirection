@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# installs and configures an nginx web server that listens on port 80
+# and has a default webpage containing the string holberton school
+sudo apt install nginx
+echo -e "<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holberton School Default Template</title>
+  </head>
+  <body>
+    <header>
+    </header>
+    <main>
+      <article>
+	<h1>Holberton School ftw</h1>
+	<p>Placeholder paragraph</p>
+      </article>
+      <aside>
+      </aside>
+    </main>
+  </body>
+</html>" | sudo tee /var/www/html/index.nginx-debian.html 1> /dev/null
+redirect="server {\n\trewrite ^/redirect_me https://i.kym-cdn.com/entries/icons/facebook/000/016/212/manning.jpg;\n"
+strng="server {$"
+sudo sed -i 's,'"${strng}"','"${redirect}"',' /etc/nginx/sites-available/default
+sudo service nginx reload
