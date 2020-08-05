@@ -4,10 +4,10 @@
 sudo apt-get -y update
 sudo apt-get -y install nginx
 echo -e "<!doctype html>
-<html lang="en">
+<html lang=\"en\">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset=\"utf-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <title>Holberton School Default Template</title>
   </head>
   <body>
@@ -27,4 +27,4 @@ redirect="server {\n\trewrite ^/redirect_me https://i.kym-cdn.com/entries/icons\
 /facebook/000/016/212/manning.jpg permanent;\n"
 strng="server {$"
 sudo sed -i 's,'"${strng}"','"${redirect}"',' /etc/nginx/sites-available/default
-sudo service nginx reload
+sudo service nginx restart
