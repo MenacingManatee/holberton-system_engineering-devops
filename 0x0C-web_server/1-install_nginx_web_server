@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 # installs and configures an nginx web server that listens on port 80
 # and has a default webpage containing the string holberton school
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install nginx
+sudo apt-get -y update
+sudo apt-get -y install nginx
 echo -e "<!doctype html>
 <html lang="en">
   <head>
