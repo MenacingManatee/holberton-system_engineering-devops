@@ -24,7 +24,7 @@ echo -e "<!doctype html>
   </body>
 </html>" | sudo tee /var/www/html/index.nginx-debian.html 1> /dev/null
 redirect="server {\n\trewrite ^/redirect_me https://i.kym-cdn.com/entries/icons\
-/facebook/000/016/212/manning.jpg;\n"
+/facebook/000/016/212/manning.jpg permanent;\n"
 strng="server {$"
 sudo sed -i 's,'"${strng}"','"${redirect}"',' /etc/nginx/sites-available/default
 sudo service nginx reload
