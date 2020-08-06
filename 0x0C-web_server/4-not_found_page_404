@@ -27,4 +27,4 @@ echo -e "<p>Ceci n'est pas une page</p>" | sudo tee /var/www/html/custom_404.htm
 redirect="server {\n\trewrite ^/redirect_me https://i.kym-cdn.com/entries/icons/facebook/000/016/212/manning.jpg permanent;\n\n\terror_page 404 /custom_404.html;\n\tlocation = /custom_404.html {\n\t\troot /var/www/html;\n\t\tinternal;\n\t}"
 strng="server {$"
 sudo sed -i 's,'"${strng}"','"${redirect}"',' /etc/nginx/sites-available/default
-sudo service nginx reload
+sudo service nginx restart
