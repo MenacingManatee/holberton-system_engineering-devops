@@ -1,4 +1,5 @@
 sudo apt-get update
 sudo apt-get -y upgrade
 sudo apt-get -y install apache2
+sed -i 's,'"#ServerRoot"','"ServerRoot"',' /etc/apache2/apache2.conf
 sudo service apache2 restart
