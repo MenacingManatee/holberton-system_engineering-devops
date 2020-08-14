@@ -15,5 +15,5 @@ backend http_back
         balance roundrobin
         server 1699-web-01 34.73.196.89:80 check
         server 1699-web-02 54.221.178.230:80 check
-" | sudo tee -a /etc/haproxy/haproxy.conf 1> /dev/null
+" | sudo tee -a /etc/haproxy/haproxy.cfg 1> /dev/null
 sudo service haproxy restart
