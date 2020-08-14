@@ -23,6 +23,7 @@ echo -e "<!doctype html>
     </main>
   </body>
 </html>" | sudo tee /var/www/html/index.nginx-debian.html 1> /dev/null
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
 find="(^[^#].*try_files \$uri \$uri\/ =404;$)"
 replace="\1\nadd_header X-Served-By $hostname;\n"
 sudo sed -i 's,'"${find}"','"${replace}"',' /etc/nginx/sites-available/default
