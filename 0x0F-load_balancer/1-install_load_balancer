@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Installs and configures a haproxy server
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y install haproxy
+echo "
+frontend http_front
+        bind *:80
+        stats uri /haproxy?stats
+        acl url_blog path_beg /blog
+        use_backend blog_back if url_blog
+        default_backend http_back
+
+backend http_back
+        balance roundrobin
+        server 1699-web-01 34.73.196.89:80 check
+        server 1699-web-02 54.221.178.230:80 check
+" | sudo tee -a /etc/haproxy/haproxy.conf 1> /dev/null
+sudo service haproxy restart
