@@ -7,9 +7,6 @@ sudo apt-get -y install haproxy
 echo "
 frontend http_front
         bind *:80
-        stats uri /haproxy?stats
-        acl url_blog path_beg /blog
-        use_backend blog_back if url_blog
         default_backend http_back
 
 backend http_back
