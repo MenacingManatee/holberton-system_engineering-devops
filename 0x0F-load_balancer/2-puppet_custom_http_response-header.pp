@@ -4,6 +4,10 @@ exec { '/usr/bin/env apt-get -y update':
 -> package { 'nginx':
   ensure => installed,
 }
+file {'/var/www/html/index.nginx-debian.html':
+  ensure  => present,
+  content => 'Holberton School',
+}
 file_line { 'add_header':
   ensure => present,
   path   => '/etc/nginx/sites-available/default',
