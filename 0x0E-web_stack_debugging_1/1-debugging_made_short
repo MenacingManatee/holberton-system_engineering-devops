@@ -3,3 +3,4 @@
 sudo rm /etc/nginx/sites-enabled/default
 ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo sed -i 's,'"\/octet-stream;"','"\/octet-stream;\n\n\tinclude /etc/nginx/sites-enabled/*.*;"',' /etc/nginx/nginx.conf
+sudo service nginx restart
