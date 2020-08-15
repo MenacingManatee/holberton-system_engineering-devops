@@ -9,6 +9,7 @@ file_line { 'add_header':
   path   => '/etc/nginx/sites-available/default',
   line   => "\tadd_header X-Served-By ${hostname};\n",
   after  => 'server_name _;',
+  notify => Service['nginx'],
 }
 service { 'nginx':
   ensure => running,
