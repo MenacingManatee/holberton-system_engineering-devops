@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # display information for subdomains of domain in $1
 # If $2 exists, display information for only specified subdomain
-if [ "$#" -lt 2 ]
+if [ "$#" -eq 1 ]
 then
     for sub in "www" "lb-01" "web-01" "web-02"
     do
