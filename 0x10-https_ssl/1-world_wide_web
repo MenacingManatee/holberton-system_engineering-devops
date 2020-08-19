@@ -1,2 +1,15 @@
 #!/usr/bin/env bash
-
+# display information for subdomains of domain in $1
+# If $2 exists, display information for only specified subdomain
+if [ "$#" -lt 2 ]
+then
+    for sub in "www" "lb-01" "web-01" "web-02"
+    do
+	inf=$(dig "$sub.$1" | grep "$1" | tail -n 1 | awk '{ print This $4, $5 }')
+	echo "The subdomain $sub is a $(echo $inf | cut -d ' ' -f 1) record and point to $(echo $inf | cut -d ' ' -f 2)"
+    done
+elif [ "$#" -eq 2 ]
+then
+    inf=$(dig "$2.$1" | grep "$1" | tail -n 1 | awk '{ print This $4, $5 }')
+    echo "The subdomain $2 is a $(echo $inf | cut -d ' ' -f 1) record and points to $(echo $inf | cut -d ' ' -f 2)"
+fi
