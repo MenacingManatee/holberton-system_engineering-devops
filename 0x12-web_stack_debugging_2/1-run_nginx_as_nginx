@@ -2,4 +2,5 @@
 # run the nginx process as the less privileged nginx user
 service nginx stop
 sed -i '1s/^/user nginx;\n/' /etc/nginx/nginx.conf
-service nginx restart
+chown -R nginx:nginx /etc/nginx/nginx.conf
+nginx -c /etc/nginx/nginx.cong -p $PWD
