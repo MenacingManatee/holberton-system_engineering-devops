@@ -5,4 +5,4 @@ chown -R nginx:nginx /etc/nginx/ /usr/share/nginx/ /usr/sbin/nginx/
 chmod 0700 /etc/nginx/nginx.conf
 sed -i '1s/^/user nginx;\n/' /etc/nginx/nginx.conf
 sed -i 's,'"80"','"8080"',' /etc/nginx/sites-enabled/default
-su - nginx -c service nginx restart
+sudo -u nginx service nginx restart
