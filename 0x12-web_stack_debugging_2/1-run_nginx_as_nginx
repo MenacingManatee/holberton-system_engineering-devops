@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # run the nginx process as the less privileged nginx user
-service nginx stop
 pkill apache2
 chown -R nginx:nginx /etc/nginx/ /usr/share/nginx/ /usr/sbin/nginx/
 sed -i '1s/^/user nginx;\n/' /etc/nginx/nginx.conf
 sed -i 's,'"80"','"8080"',' /etc/nginx/sites-enabled/default
-nginx -c /etc/nginx/nginx.conf
+service nginx restart
