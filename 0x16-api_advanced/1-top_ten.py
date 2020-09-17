@@ -14,14 +14,14 @@ def top_ten(subreddit):
     data = jsn.json().get('data')
     if data is None or data == {}:
         print('None')
-        exit
+        return
     res.append(jsn.json().get('data').get('children')[0].get('data').
                get('title'))
     for i in range(9):
         data = jsn.json().get('data')
         if data is None or data == {}:
             print('None')
-            exit
+            return
         after = jsn.json().get('data').get('after')
         jsn = requests.get('https://reddit.com/r/{}/hot.json?limit=1&after={}'.
                            format('programming', after), headers=user_agent)
