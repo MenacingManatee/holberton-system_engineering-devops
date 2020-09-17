@@ -5,7 +5,6 @@ import requests
 
 def recurse(subreddit, hot_list=[], after=''):
     '''returns a list of all hot titles on a subreddit'''
-    print(len(hot_list))
     u_a = {'User-agent': 'User Agent 1.0'}
     if len(hot_list) == 0:
         data = requests.get('https://reddit.com/r/{}/hot.json?limit=1'.
