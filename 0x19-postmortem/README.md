@@ -25,8 +25,13 @@
 \***Root Cause:**\* The cause of the outage was discovered to be a typo in a settings file that was updated shortly before the scheduled maintenance update was pushed to the server. Based on update logs for the file in question, it was most likely a last minute addition that did not receive the necessary time for error checking. The error was fixed simply by removing the typo, testing locally, and then pushing the change to the server before rebooting.
 
 \***Corrective and preventative measures:**\*
-TODO/Done - Action - Reason
+
+**TODO/Done - Action - Reason**
+
 TODO - add monitoring on server responses - Customer reports are useful but should not be relied upon
+
 TODO - Require local testing before updates can be added to main server - Should reduce chances of typos and other errors remaining uncaught before users can see it
+
 TODO - Require a hold period on changes before they can be pushed to the server, barring critical issues - Allows time for a peer to review, as a second set of eyes may catch previously unseen errors
+
 TODO - Add alert for failure to find files after updating - Allows for quicker action in similar situations
