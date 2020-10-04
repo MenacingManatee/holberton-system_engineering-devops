@@ -5,7 +5,7 @@
 * 08:00 - Scheduled maintenance update queued
 * 08:01 - Update pushed to server.
 * 08:06 - Server goes down temporarily to update
-* 08:07 - *Outage Begins* Server rebooted
+* 08:07 - \***Outage Begins**\* Server rebooted
 * 08:09 - User report received on 500 error
 * 08:10 - All traffic to web page confirmed to be failing
 * 08:11 - Ticket taken by IT technician
@@ -20,7 +20,7 @@
 * 08:41 - Testing performed locally to ensure fix worked
 * 08:43 - Fix pushed to server
 * 08:44 - Server robooted
-* 08:44 *Outage ends*
+* 08:44 \***Outage ends**\*
 
 \***Root Cause:**\* The cause of the outage was discovered to be a typo in a settings file that was updated shortly before the scheduled maintenance update was pushed to the server. Based on update logs for the file in question, it was most likely a last minute addition that did not receive the necessary time for error checking. The error was fixed simply by removing the typo, testing locally, and then pushing the change to the server before rebooting.
 
