@@ -1,4 +1,5 @@
 ![server meme](https://preview.redd.it/t7r4r2643hv21.jpg?auto=webp&s=bdbbf4f0f8edc5141c0a7940ad601f0f94eec01b)
+
 \***Summary:**\* Web page returned a 500 error for a period of 37 minutes, from 08:07 to 08:44, following an update that contained a typo, resulting al all users that accessed the page during that timeframe being unable to access site.
 
 \***Timeline:**\*
